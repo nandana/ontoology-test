@@ -1,0 +1,15 @@
+digraph ar2dtool_diagram { 
+rankdir=LR;
+size="1000"
+node [shape = rectangle, color="black"]; "alm_istack:ClosedDefect" "alm_istack:Revision" "alm_istack:Defect" "alm_istack:RegisteredDefect" "oslc_asset:Asset" "alm_istack:ClientDefect" "alm_istack:WorksForMeDefect" "oslc_cm:ChangeRequest" "alm_istack:InProgressDefect" "alm_istack:NewDefect" "alm_istack:Version" ; /*classes style*/
+	"alm_istack:NewDefect" -> "alm_istack:RegisteredDefect" [ label = "rdfs:subClassOf" ];
+	"alm_istack:ClosedDefect" -> "alm_istack:RegisteredDefect" [ label = "rdfs:subClassOf" ];
+	"alm_istack:Defect" -> "oslc_cm:ChangeRequest" [ label = "rdfs:subClassOf" ];
+	"alm_istack:WorksForMeDefect" -> "alm_istack:RegisteredDefect" [ label = "rdfs:subClassOf" ];
+	"alm_istack:ClientDefect" -> "alm_istack:Defect" [ label = "rdfs:subClassOf" ];
+	"alm_istack:Version" -> "oslc_asset:Asset" [ label = "rdfs:subClassOf" ];
+	"alm_istack:RegisteredDefect" -> "alm_istack:Defect" [ label = "rdfs:subClassOf" ];
+	"alm_istack:InProgressDefect" -> "alm_istack:RegisteredDefect" [ label = "rdfs:subClassOf" ];
+	"alm_istack:Revision" -> "alm_istack:Version" [ label = "rdfs:subClassOf" ];
+
+}
