@@ -20,6 +20,7 @@
 
 -->
 
+<!-- Ontology for testing ontoology -->
 
 <!DOCTYPE rdf:RDF [
     <!ENTITY foaf "http://xmlns.com/foaf/0.1/" >
